@@ -13,4 +13,366 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image: var(--bg-gradient);
+  background-size: cover;
+  background-attachment: fixed;
+  margin-block-end: 103px;
 }
+
+.header {
+  width: var(--block-width);
+  background-color: #fff;
+  margin: auto;
+  border: 2px solid var(--color-text);
+  margin-block-start: 100px;
+  min-block-size: 368px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-block-end: 100px;
+}
+
+.header__title {
+  font-family: var(--accent-font), sans-serif;
+  font-weight: 400;
+  font-size: 65px;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.header__text {
+  font-family: var(--accent-font), sans-serif;
+  font-weight: 400;
+  font-size: 23px;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.content {
+  width: var(--block-width);
+  margin: auto;
+}
+
+.card__list {
+  display: grid;
+  gap: 47px;
+}
+
+.card {
+  inline-size: 100%;
+  position: relative;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.card__wrapper {
+  padding: 26px;
+  display: grid;
+  gap: 25px;
+}
+
+.card__title {
+  font-family: var(--main-font), sans-serif;
+  font-weight: var(--font-weight-title-card);
+  font-size: 18px;
+  color: var(--color-text);
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  padding-left: 4px;
+}
+
+.card__text {
+  font-family: var(--main-font), sans-serif;
+  font-weight: var(--font-weight-text-card);
+  font-size: 18px;
+  line-height: 117%;
+  color: var(--color-text);
+}
+
+.button__card {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+
+.button {
+  border: 2px solid var(--color-text);
+  font-family: var(--accent-font), sans-serif;
+  color: var(--color-text);
+  box-shadow: 0 0 0 0 #000;
+  transition: box-shodow 0.3s ease;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.card__like-button {
+  font-size: 14px;
+  min-width: 130px;
+  padding-block-start: 9px;
+  padding-block-end: 9px;
+  background-color: inherit;
+}
+
+.like-icon {
+  width: 39px;
+  height: 40px;
+  }
+
+  .floppy_icon {
+    width: 21px;
+    height: 21px;
+    stroke: #fff;
+    mix-blend-mode: difference;
+  }
+
+  .save_memory {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #fff;
+    font-family: var(--accent-font), sans-serif;
+    font-weight: var(--font-weight-text-card, 400);
+    font-size: 14px;
+    line-height: 90%;
+    color: var(--color-text);
+    border: 2px solid var(--color-text);
+    justify-self: center;
+    min-width: 339px;
+    min-height: 56px;
+    justify-content: center;
+  }
+
+  .button__text {
+    text-align: center;
+    font-family: var(--accent-font), sans-serif;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    mix-blend-mode: difference;
+  }
+
+  .card::after {
+    content: '</HTML>';
+    position: absolute;
+    font-family: var(--accent-font), sans-serif;
+    top: 25px;
+    right: 25px;
+    font-size: 14px;
+    mix-blend-mode: hard-light;
+    opacity: 0.5;
+    text-shadow: 0px 0px 2px #fff;
+ }
+
+.card__list .card__list-item:not(:last-child) {
+  background-color: var(--bg-color-card);
+  border: 2px solid var(--color-text);
+}
+
+.modal_window {
+  max-width: 353px;
+  min-height: 193px;
+  padding: 30px;
+}
+
+.warring_text {
+font-family: var(--accent-font), sans-serif;
+font-weight: var(--font-weight-text-card);
+font-size: 14px;
+line-height: 150%;
+text-transform: uppercase;
+color: var(--color-text);
+}
+
+.floppy_modal {
+  width: 40px;
+  height: 40px;
+  align-self: center;
+}
+
+.modal_window .button__text {
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.modal_window[open] {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: repeat(2, min-content);
+  column-gap: 20px;
+  row-gap: 30px;
+}
+
+.modal_exit_button {
+  grid-column: 1/span 2;
+  width: 100%;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border: 2px solid var(--color-text);
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 0  #000;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 0  #000;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  translate: -100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.button:hover::before {
+  transform: translate(100%); 
+}
+
+/* .like-icon:hover .main-body,
+.like-icon:hover .core {
+  fill: black;
+} */
+
+.like-icon .core {
+  transition: fill 0.3s linear;
+  fill: white;
+}
+
+.like-icon .contour {
+  transition: fill 0.3s  linear;
+}
+
+.like-icon .main-body {
+  transition: fill 0.3s linear;
+  fill: white;
+}
+
+.like-icon {
+  fill: #000;
+  transition: fill 0.3s 0.06s linear;
+}
+
+.like-icon:hover .core {
+  fill: black;
+  /* transition: fill 0.3s 0.3s linear; */
+}
+
+.like-icon:hover .main-body {
+  fill: black;
+  /* transition: fill 0.3s 0.05s linear; */
+}
+
+.link-icon:hover .contour {
+  fill: black;
+}
+
+.like-icon:active .main-body {
+  /* transition: fill 0.3s 0.05s linear; */
+  fill: #ff0000;
+}
+
+.like-icon:active .core {
+  fill: #ff0000;
+  /* transition: fill 0.3s 0.3s linear; */
+}
+
+.like-icon .sparks {
+  opacity: 0;
+}
+
+.is-liked .contour  {
+  fill: #ff0000 ;
+  animation: scale 0.3s ease-in;
+}
+
+.is-liked .main-body {
+  fill: #ff0000;
+  animation: scale 0.3s 0.1s ease-in;
+}
+
+.is-liked .core {
+  fill: #ff0000;
+  animation: scale 0.3s 0.1s ease-in ;
+}
+
+.is-liked .sparks{
+  animation: opacity 0.3s 0.1s ease-in;
+}
+
+.is-liked:hover .contour {
+  fill: black;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.25);
+  }
+}
+
+@keyframes opacity  {
+  from{
+      opacity: 0;
+    }
+
+  to {
+      opacity: 1;
+    }
+}
+
+
+@media (width < 460px) {
+  .page {
+    width: 100%;
+  }
+
+ .header {
+  gap: 20px;
+  min-block-size: 325px;
+ }
+
+  .header__title {
+    font-size: 49px;
+  }
+
+  .header__text {
+    font-size: 14px;
+  }
+
+  .floppy_icon {
+    justify-self: center;
+    align-self: end;
+    height: 100%;
+    width: 28px;
+  }
+
+  .save_memory {
+    min-width: 306px;
+    display: grid;
+    padding: 15px;
+  }
+
+  .button__text {
+    align-self: start;
+  }
+
+}
+
+/* ПРОСТИТЕ ПОЖАЛУЙСТА, ОЧЕНЬ ГОРЯТ ДЕДЛАЙНЫ!! */
