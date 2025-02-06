@@ -67,13 +67,10 @@
 
 .card__title {
   font-family: var(--main-font), sans-serif;
-  font-weight: var(--font-weight-title-card);
   font-size: 18px;
   color: var(--color-text);
-  /* margin-top: 5px;
-  margin-left: 10px;
-  margin-bottom: 5px; */
   padding: 1px 24px 3px 10px;
+  font-variation-settings: 'wght' var(--font-weight-title-card);
 }
 
 .img-wrapper {
@@ -119,11 +116,11 @@
 
 .card__text {
   font-family: var(--main-font), sans-serif;
-  font-weight: var(--font-weight-text-card);
   font-size: 18px;
   line-height: 117%;
   color: var(--color-text);
   padding-right: 5px;
+  font-variation-settings: 'wght' var(--font-weight-text-card);
 }
 
 .like {
@@ -264,6 +261,10 @@ dialog::backdrop {
 
 .sepia {
   filter: sepia(80%);
+}
+
+.mix {
+  filter: sepia(80%) hue-rotate(100deg);
 }
 
 .card__like-button:focus-visible {
