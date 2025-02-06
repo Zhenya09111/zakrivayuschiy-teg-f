@@ -91,19 +91,21 @@
   color: #000;
   font-size: 14px;
   text-shadow: -2px 0 var(--stroke--color),
-                0 2px var(--stroke--color), 
-                2px 0 var(--stroke--color),
-                0 -2px var(--stroke--color); 
+    0 2px var(--stroke--color),
+    2px 0 var(--stroke--color),
+    0 -2px var(--stroke--color);
 
-              }
 
-  @supports (-webkit-text-stroke: 2px var(--stroke--color)) {
-    .img-label {
-      
-      -webkit-text-stroke: 2px var(--stroke--color); 
-      text-shadow: none;
-    }
+}
+
+@supports (-webkit-text-stroke: 2px var(--stroke--color)) {
+  .img-label {
+
+
+    -webkit-text-stroke: 2px var(--stroke--color);
+    text-shadow: none;
   }
+}
 
 .card__image {
   width: 100%;
@@ -270,7 +272,8 @@ dialog::backdrop {
 }
 
 .sparks {
-  opacity: 0; 
+  opacity: 0;
+
 
 }
 
@@ -322,6 +325,7 @@ dialog::backdrop {
   transform: translateX(0%);
   transition: transform 0.5s ease-in-out;
 }
+
 .like-icon.is-liked .core {
   fill: #ff0000;
   transition: fill 0.3s;
@@ -363,7 +367,7 @@ dialog::backdrop {
 
   .header__title {
     font-size: 49px;
-  } 
+  }
 
   .header__text {
     font-size: 14px;
@@ -380,11 +384,11 @@ dialog::backdrop {
   .content {
     gap: 51px;
   }
- 
+
   .floppy_icon {
     height: 100%;
     width: 28px;
-  } 
+  }
 
   .save_memory {
     min-width: 306px;
